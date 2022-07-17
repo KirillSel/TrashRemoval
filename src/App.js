@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import OrderModal from './components/modal/OrderModal';
 import './App.css';
+import About from './components/pages/About';
+import Containers from './components/pages/Containers';
+import Footer from './components/pages/Footer';
+import Navbar from './components/nav/Navbar';
+import NavProvider from './components/NavContext';
+import Reviews from './components/pages/Reviews';
+import PersonalDetails from './components/pages/PersonalDetails';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className="bg-gray-100">
+        <NavProvider> 
+          <Navbar/>
+          <About/>
+          <Containers/>
+          <Reviews/>
+          <PersonalDetails/>
+          <Footer/>
+          
+        </NavProvider>
+      </div>
+    
+    
   );
 }
 

@@ -1,0 +1,7 @@
+.modal{
+    transform: scale(0);
+}
+
+.modal.active {
+    transform: scale(1);
+}
